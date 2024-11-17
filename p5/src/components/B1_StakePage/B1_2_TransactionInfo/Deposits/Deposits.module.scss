@@ -1,0 +1,132 @@
+@import "../../../../assets/style/app";
+
+.deposits {
+  border: 1px solid #000;
+  border-radius: 16px;
+  box-shadow: 0 8px 0 0 #000;
+  background: #FFF;
+  padding: 24px;
+
+  .title {
+    @include TitanOne;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000;
+
+    @include desktop {
+      font-size: 32px;
+    }
+  }
+
+  .labels {
+    @include onlyDesktop(flex);
+    margin-top: 24px;
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: rgba(0, 0, 0, 0.5);
+
+      &:nth-child(1) {
+        width: 97px + 97px;
+      }
+
+      &:nth-child(2) {
+        width: 36px + 67px;
+      }
+
+      &:nth-child(3) {
+        width: 59px + 60px;
+      }
+
+      &:nth-child(4) {
+        width: 49px + 79px;
+      }
+    }
+  }
+
+  .info {
+    margin-top: 24px;
+
+    @include desktop {
+      margin-top: 16px;
+    }
+
+    .item {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 16px;
+
+      @include desktop {
+        display: flex;
+      }
+
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include desktop {
+          justify-content: normal;
+        }
+
+        &:nth-child(2) {
+          margin-top: 16px;
+
+          @include desktop {
+            margin-top: 0;
+          }
+        }
+
+        &:nth-child(1) p, &:nth-child(2) p:nth-child(1) {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          color: #000;
+        }
+
+        &:nth-child(2) p:nth-child(2) {
+          border: 1px solid #000;
+          border-radius: 8px;
+          box-shadow: 0 2px 0 0 #000;
+          padding: 5px 8px;
+
+          @include TitanOne;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 140%;
+          text-transform: uppercase;
+          color: #000;
+          white-space: nowrap;
+        }
+
+        &:nth-child(1) p:nth-child(1) {
+          @include desktop {
+            width: 143px + 35px;
+          }
+
+        }
+
+        &:nth-child(1) p:nth-child(2) {
+          @include desktop {
+            width: 68px + 35px;
+          }
+        }
+
+        &:nth-child(2) p:nth-child(1) {
+          @include desktop {
+            width: 83px + 36px;
+          }
+        }
+
+      }
+    }
+  }
+}

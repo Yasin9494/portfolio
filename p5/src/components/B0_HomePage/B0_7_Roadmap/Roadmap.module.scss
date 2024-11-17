@@ -1,0 +1,60 @@
+@import "../../../assets/style/app";
+
+.roadmap {
+  position: relative;
+
+  .backMobile {
+    @include onlyMobile;
+    position: relative;
+    z-index: 50;
+  }
+
+  .backDesktop {
+    @include onlyDesktop();
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .cardsMobile {
+    @include onlyMobile();
+    padding-top: 24px;
+    padding-bottom: 32px;
+
+    .cardWrapper {
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  .card0 {
+    position: relative;
+    z-index: 999;
+    @include centerRow;
+    height: 100vh;
+    width: 100%;
+    background: rgba(255, 0, 0, 0.2);
+
+    p {
+      @include TitanOne;
+      font-size: 400px;
+    }
+  }
+
+  .cardsDesktop {
+    @include onlyDesktop();
+    position: relative;
+    z-index: 999;
+    width: 100%;
+
+    .cardWrapper {
+      height: 100vh;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+
+}

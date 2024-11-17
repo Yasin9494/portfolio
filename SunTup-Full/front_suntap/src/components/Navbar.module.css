@@ -1,0 +1,61 @@
+ul.navbar {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #1b182b;
+	font-family: "Inter", sans-serif;
+	font-size: 10px;
+	color: #fff;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
+	margin: auto;
+	gap: 10px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+}
+ul.navbar li a {
+	padding: 8px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 3px;
+	text-transform: capitalize;
+	background: #151527;
+	border: 1px solid #6001ff;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+ul.navbar li a img {
+	width: 40px;
+	height: 40px;
+}
+ul.navbar.bear li a:hover,
+ul.navbar.bear li a:hover svg path {
+	color: #d63c3c;
+	fill: #d63c3c;
+}
+ul.navbar.bear li a.active,
+ul.navbar.bear li a.active svg path {
+	color: #d63c3c;
+	fill: #d63c3c;
+}
+ul.navbar.bull li a.active,
+ul.navbar.bull li a.active svg path {
+	color: #23b95e;
+	fill: #23b95e;
+}
+ul.navbar.bull li a:hover,
+ul.navbar.bull li a:hover svg path {
+	color: #23b95e;
+	fill: #23b95e;
+}

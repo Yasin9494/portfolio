@@ -1,0 +1,43 @@
+@import "../../../assets/style/app";
+
+.runningString {
+  position: relative;
+  height: 38px;
+  background-color: #EF87CC;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  overflow: hidden;
+
+  @include desktop {
+    height: 70px;
+  }
+
+  .part {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .item {
+      @include TitanOne;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      @include desktop {
+        font-size: 32px;
+      }
+
+      &:nth-child(2n) {
+        font-style: normal;
+        font-weight: normal;
+        margin: 0 40px;
+      }
+    }
+
+  }
+}

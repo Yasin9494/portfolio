@@ -1,0 +1,43 @@
+@import '/src/functions';
+
+.node {
+  &Body {
+    display: flex;
+    justify-content: center;
+    gap: rem(150);
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: remMb(26);
+    }
+
+    &__content {
+      max-width: rem(800);
+
+      @media (max-width: 767px) {
+        max-width: 100%;
+      }
+
+      p {
+        color: #fff;
+        font-family: Saira;
+        font-size: rem(20);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+
+        @media (max-width: 767px) {
+          font-size: remMb(16);
+        }
+
+        &:not(:first-child) {
+          margin: rem(30) 0 0;
+
+          @media (max-width: 767px) {
+            margin: remMb(16) 0 0;
+          }
+        }
+      }
+    }
+  }
+}

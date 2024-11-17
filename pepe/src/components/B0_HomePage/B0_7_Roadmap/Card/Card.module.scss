@@ -1,0 +1,108 @@
+@import "../../../../assets/style/app";
+
+.card {
+
+  .inner {
+    border: 1px solid #000;
+    border-radius: 16px;
+    box-shadow: 0 4px 0 0 #000;
+    width: 312px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 24px;
+    padding-bottom: 16px;
+
+    @include desktop {
+      width: 1200px;
+      display: flex;
+      padding-top: 0;
+      padding-bottom: 24px;
+    }
+
+    .top {
+      margin: 0 24px 0;
+
+      @include desktop {
+        margin: 24px 0 0 24px;
+        flex-grow: 1;
+      }
+
+      .step {
+        @include TitanOne;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #000;
+
+        @include desktop {
+          font-size: 32px;
+        }
+      }
+
+      .texts {
+        margin-top: 16px;
+
+        @include desktop {
+          margin-top: 24px;
+        }
+
+        .span {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 140%;
+          color: #000;
+        }
+
+        .ticket {
+          display: inline-block;
+          border: 1px solid #000;
+          border-radius: 8px;
+          box-shadow: 0 2px 0 0 #000;
+          transform: rotate(-2deg);
+          padding: 5px 8px;
+          @include TitanOne;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 140%;
+          text-transform: uppercase;
+          color: #000;
+        }
+      }
+
+    }
+
+    .imageWrapper {
+      flex-shrink: 0;
+      width: 280px;
+      height: 219px;
+      box-sizing: border-box;
+      border: 1px solid #000;
+      border-radius: 16px;
+      margin: 24px auto 0;
+
+      @include desktop {
+        margin: 16px 16px 0 16px;
+        width: 578px;
+        height: 220px;
+      }
+
+      .imgMobile {
+       @include onlyMobile() {
+         width: 100%;
+         height: 100%;
+       }
+      }
+
+      .imgDesktop {
+        @include onlyDesktop() {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+    }
+
+  }
+
+}

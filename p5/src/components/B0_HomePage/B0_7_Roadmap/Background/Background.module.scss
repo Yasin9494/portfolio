@@ -1,0 +1,14 @@
+@import "../../../../assets/style/app";
+
+.background {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: #006d28;
+  width: 100%;
+  height: 312px;
+
+  @include desktop {
+    height: 100vh;
+  }
+}

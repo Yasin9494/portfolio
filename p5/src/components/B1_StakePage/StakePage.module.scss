@@ -1,0 +1,24 @@
+@import "../../assets/style/app";
+
+.stakePage {
+  padding-top: 32px;
+  padding-bottom: 64px;
+
+  @include desktop {
+    padding-top: 44px;
+  }
+
+  .title {
+    @include TitanOne;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+
+    @include desktop {
+      font-size: 64px;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@import "../../../assets/style/app";
+
+.buttonRunning {
+  //cursor: pointer;
+  @include centerRow;
+  position: relative;
+  border: 1px solid #000;
+  border-radius: 8px;
+  box-shadow: 0 2px 0 0 #000;
+  padding: 10px 24px;
+
+
+  & > svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+  }
+
+  .label {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    //transition: 0.3s;
+  }
+
+  .dot {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 13px;
+    height: 13px;
+    background-color: #9c0e0e;
+    border: 1px solid #eff0f4;
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
+
+  .partsWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+
+    .part {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      .item {
+        display: flex;
+        align-items: center;
+        margin-left: 16px;
+
+        svg {
+          width: 18px;
+          height: 18px;
+          margin-right: 6px;
+        }
+
+        .text {
+          //font-style: italic;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 120%;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
+
+    }
+  }
+
+
+
+  &:hover {
+    @include desktop {
+      & > svg {
+        opacity: 0;
+      }
+
+      & > .label {
+        opacity: 0;
+      }
+
+      .partsWrapper {
+        opacity: 1;
+      }
+    }
+  }
+
+
+}

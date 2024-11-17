@@ -1,0 +1,36 @@
+@import '/src/functions';
+
+.title {
+  color: #fff;
+  font-family: DaysOne;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: normal;
+
+  span {
+    color: #f5a300;
+  }
+
+  &.h2 {
+    font-size: rem(60);
+
+    @media (max-width: 767px) {
+      font-size: remMb(32);
+    }
+  }
+  &.h3 {
+    font-size: rem(48);
+
+    @media (max-width: 767px) {
+      font-size: remMb(32);
+    }
+  }
+  &.h4 {
+    font-size: rem(32);
+
+    @media (max-width: 767px) {
+      font-size: remMb(20);
+    }
+  }
+}

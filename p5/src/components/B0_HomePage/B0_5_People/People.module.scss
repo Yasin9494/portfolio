@@ -1,0 +1,55 @@
+@import "../../../assets/style/app";
+
+.people {
+  background: #eff0f4;
+  overflow: hidden;
+  position: relative;
+  height: 550px;
+
+  @include desktop {
+    height: 860px;
+  }
+
+  .peopleImg {
+    position: absolute;
+    z-index: 2;
+    left: calc(50% + 30px);
+    bottom: 0;
+    transform: translate(-50%, 40%);
+    width: 578px;
+    height: auto;
+
+    @include desktop {
+      width: 1551px;
+      transform: translate(-50%, 40%);
+    }
+  }
+
+  .left {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    height: 500px;
+    width: auto;
+    transform-origin: left bottom;
+
+    @include desktop {
+      height: 800px;
+    }
+  }
+
+  .right {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    height: 500px;
+    width: auto;
+    transform-origin: right bottom;
+
+    @include desktop {
+      height: 800px;
+    }
+  }
+}

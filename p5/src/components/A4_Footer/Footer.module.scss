@@ -1,0 +1,162 @@
+@import "../../assets/style/app";
+
+.footer {
+  @include container;
+  background: #f2c53b;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .inner {
+    @include inner;
+    position: relative;
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .people {
+      @include onlyDesktop();
+      position: absolute;
+      bottom: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 592px;
+      height: auto;
+    }
+
+    .starRight {
+      @include onlyDesktop();
+      position: absolute;
+      width: 298px;
+      height: 186px;
+      top: -40px;
+      right: 120px;
+    }
+
+    .topPart {
+
+      .logo {
+        display: block;
+
+        img {
+          display: block;
+          width: 120px;
+          height: 60px;
+        }
+      }
+
+      .links {
+        position: relative;
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include desktop {
+          margin-top: 32px;
+        }
+
+        .link {
+          display: block;
+          text-decoration: none;
+
+          &:not(:first-child) {
+            margin-top: 16px;
+          }
+
+          &:hover {
+            p {
+              color: #f77113;
+            }
+          }
+
+          p {
+            text-transform: uppercase;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 120%;
+            color: #000;
+            transition: 0.3s;
+          }
+        }
+
+        .starLeft {
+          position: absolute;
+          width: 143px;
+          height: 225px;
+          bottom: 0;
+          left: 150px;
+
+        }
+      }
+
+    }
+
+    .bottomPart {
+      position: relative;
+      margin-top: 64px;
+
+      @include desktop {
+        margin-top: 0;
+        width: 300px;
+      }
+
+      .design {
+        font-style: italic;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 120%;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #000;
+        margin-top: 16px;
+
+        @include desktop {
+          margin-top: 54px;
+        }
+
+      }
+
+      .borderRight {
+        position: absolute;
+        width: 45px;
+        height: auto;
+        bottom: -24px;
+        right: -2px;
+
+        @include desktop {
+          bottom: -32px;
+        }
+      }
+
+    }
+
+    .rights {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #000;
+      margin-top: 28px;
+
+      @include desktop {
+        margin-top: 64px;
+      }
+
+      &_mobile {
+        @include onlyMobile();
+      }
+
+      &_desktop {
+        @include onlyDesktop();
+      }
+    }
+  }
+}

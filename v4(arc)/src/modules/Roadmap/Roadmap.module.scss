@@ -1,0 +1,144 @@
+@import '/src/functions';
+
+.slider {
+  @media (max-width: 767px) {
+    margin: remMb(10) 0 0;
+    padding: 0 0 remMb(70) !important;
+  }
+
+  .pagination {
+    bottom: 0;
+  }
+
+  &__bullet {
+    flex: 0 0 auto;
+    display: block;
+    width: remMb(8);
+    height: remMb(8);
+    border-radius: 50%;
+    background-color: #fff;
+
+    transition: all 0.3s ease;
+
+    &.active {
+      background-color: #f5a300;
+    }
+  }
+}
+
+.roadmap {
+  margin: rem(120) 0 0;
+
+  @media (max-width: 767px) {
+    margin: remMb(40) 0 0;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &Body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: rem(80) 0 0;
+    gap: rem(35) rem(15);
+  }
+
+  &Card {
+    flex: 0 0 calc(33.333% - rem(10));
+    overflow: hidden;
+    padding: 0 rem(10) 0 0;
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+
+    &__num {
+      position: relative;
+      display: flex;
+      color: #f5a300;
+      text-align: center;
+      font-family: DaysOne;
+      font-size: rem(80);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+      padding: 0 0 0 rem(35);
+
+      @media (max-width: 767px) {
+        font-size: remMb(80);
+        padding: 0 0 0 remMb(15);
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.22);
+        position: absolute;
+        top: 50%;
+        left: rem(120);
+        transform: translate(0, -50%);
+
+        @media (max-width: 767px) {
+          left: remMb(95);
+        }
+      }
+    }
+
+    &__text {
+      color: #fff;
+      font-family: Saira;
+      font-size: rem(24);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      @media (max-width: 767px) {
+        font-size: remMb(16);
+      }
+
+      p {
+      }
+
+      ul {
+        margin: rem(30) 0 0;
+
+        @media (max-width: 767px) {
+          margin: remMb(20) 0 0;
+        }
+
+        li {
+          position: relative;
+          padding: 0 0 0 rem(35);
+
+          @media (max-width: 767px) {
+            padding: 0 0 0 remMb(25);
+          }
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: rem(15);
+            top: rem(15);
+            background-color: #fff;
+            width: rem(6);
+            height: rem(6);
+            border-radius: rem(2);
+
+            @media (max-width: 767px) {
+              left: remMb(8);
+              top: remMb(9);
+              width: remMb(5);
+              height: remMb(5);
+              border-radius: remMb(2);
+            }
+          }
+        }
+      }
+    }
+  }
+}

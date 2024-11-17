@@ -1,0 +1,193 @@
+.main {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  }
+  
+  .main_content {
+	height: calc(100% - 120px);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 12px;
+  }
+  
+  .coin {
+	width: 70%; /* Уменьшена ширина для лучшей компоновки */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+  }
+  
+  .coin img {
+	border-radius: 100%;
+	border: 4px solid #f1ff2e; /* Уменьшен размер бордюра */
+	box-shadow: 0 4px 20px 10px rgba(236, 255, 127, 0.25); /* Уменьшен размер тени */
+  }
+  
+  .coin_count {
+	width: fit-content;
+	font-size: 32px; /* Уменьшен размер шрифта */
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-weight: 600;
+	position: relative;
+  }
+  
+  .coin_count img {
+	width: 160px; /* Уменьшен размер изображения */
+	position: relative;
+	z-index: 9;
+  }
+  
+  .coin_count span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 11px;
+	width: 160px; /* Уменьшен размер контейнера */
+	height: 48px; /* Уменьшена высота контейнера */
+	gap: 8px;
+	position: absolute;
+	bottom: 0px;
+	backdrop-filter: blur(28px);
+	background: linear-gradient(
+	  223deg,
+	  rgba(151, 71, 255, 0.5) 6.53%,
+	  rgba(255, 255, 255, 0.5) 100%
+	);
+	opacity: 0.9;
+  }
+  
+  .coin_count span img {
+	width: 28px; /* Уменьшен размер иконки */
+  }
+  
+  .parallax {
+	transform: scale(1.1);
+	filter: brightness(1.2);
+  }
+  
+  .clickAnimation {
+	color: #f1ff2e;
+	position: absolute;
+	font-size: 22px; /* Уменьшен размер шрифта */
+	opacity: 0;
+	font-weight: 600;
+	animation: float 1s ease-out;
+	-webkit-animation: float 1s ease-out;
+  }
+  
+  @keyframes float {
+	0% {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+	100% {
+	  transform: translateY(-50px);
+	  opacity: 0;
+	  -webkit-transform: translateY(-50px);
+	  -moz-transform: translateY(-50px);
+	  -ms-transform: translateY(-50px);
+	  -o-transform: translateY(-50px);
+	}
+  }
+  
+  .data {
+	width: calc(100% - 40px);
+	margin: 0 0 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+  }
+  
+  .limits {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+  
+  .limits .item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px; /* Уменьшен размер шрифта */
+	font-weight: 600;
+	color: #fff;
+	gap: 8px;
+	flex-wrap: wrap;
+  }
+  
+  .progress {
+	height: 8px; /* Уменьшена высота прогресс-бара */
+	background: #552fa0;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	position: relative;
+	overflow: hidden;
+  }
+  
+  .progress .line {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #f1ff2e;
+  }
+  
+  @media (max-height: 590px) {
+	.coin {
+	  width: 50%;
+	}
+  }
+  
+  .logo {
+	width: 90px; /* Уменьшен размер логотипа */
+	position: absolute;
+	top: 20px;
+	left: 20px;
+  }
+  
+  .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 10px 20px;
+  }
+  
+  .user_info {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+  }
+  
+  .avatar {
+	height: 35px; /* Уменьшен размер аватара */
+	width: 35px;  /* Уменьшен размер аватара */
+	border-radius: 50%;
+	margin-left: 10px;
+  }
+  
+  .telegramId {
+	color: white;
+	font-size: 1.1rem; /* Уменьшен размер шрифта */
+	margin-right: 10px;
+	margin-top: 6px; 
+  }
+  

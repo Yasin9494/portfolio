@@ -1,0 +1,47 @@
+@import '/src/functions';
+
+.tokenomiks {
+  padding: rem(90) 0 0;
+  background-image: url(./assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: 767px) {
+    padding: remMb(24) 0 0;
+    background-image: url(./assets/bg-mobile.jpg);
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &Body {
+    margin: rem(100) auto 0;
+    width: rem(1475);
+
+    @media (max-width: 767px) {
+      margin: remMb(28) auto 0;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+
+      animation: spaceshipAnimDino 3s infinite alternate-reverse;
+    }
+
+    @keyframes spaceshipAnimDino {
+      0% {
+        transform: translate(-4px, -4px);
+      }
+      50% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(4px, 4px);
+      }
+    }
+  }
+}

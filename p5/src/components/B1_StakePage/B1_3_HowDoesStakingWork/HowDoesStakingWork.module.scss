@@ -1,0 +1,161 @@
+@import "../../../assets/style/app";
+
+.howDoesStakingWork {
+  padding-top: 40px;
+
+  @include desktop {
+    padding-top: 48px;
+  }
+
+  .titleWrapper {
+    @include container;
+
+    .inner {
+      @include inner;
+
+      .title {
+        @include container;
+        @include TitanOne;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #000;
+
+        @include desktop {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+
+
+  .itemsMobile {
+    @include onlyMobile;
+    overflow: hidden;
+    margin-top: 24px;
+    position: relative;
+    height: 305px + 8px;
+
+    .part {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 305px;
+      display: flex;
+
+      .item {
+        border: 1px solid #000;
+        border-radius: 16px;
+        box-shadow: 0 8px 0 0 #000;
+        background: #FFF;
+        padding: 24px;
+        box-sizing: border-box;
+        width: 230px;
+        margin-left: 16px;
+
+        .icon {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .texts {
+          margin-top: 24px;
+        }
+      }
+
+    }
+  }
+
+
+  .itemsDesktop {
+    @include onlyDesktop();
+    @include container;
+
+    margin-top: 24px;
+
+
+    .inner {
+      @include inner;
+      border: 1px solid #000;
+      border-radius: 16px;
+      box-shadow: 0 8px 0 0 #000;
+      background: #FFF;
+      padding: 24px;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+
+      .item {
+        display: flex;
+        position: relative;
+
+        &:not(:first-child) {
+          padding-left: 24px;
+        }
+
+        &:not(:last-child) {
+          padding-right: 24px;
+          //border-right: 1px solid #000;
+
+          &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 55px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            background: rgba(0, 0, 0, 0.3);
+          }
+        }
+
+        .texts {
+          margin-left: 24px;
+        }
+
+      }
+    }
+
+
+
+  }
+
+  .icon {
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+
+    @include desktop {
+      width: 60px;
+      height: 60px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .itemTitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000;
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 12px;
+  }
+
+}

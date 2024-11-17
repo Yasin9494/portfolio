@@ -1,0 +1,80 @@
+@import "../../../assets/style/app";
+
+.items {
+  @include container;
+  background: #F2C53B;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  .inner {
+    @include inner;
+
+    @include desktop {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include desktop {
+        align-items: normal;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+        @include desktop {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+
+        &::after {
+          @include desktop {
+            position: absolute;
+            display: block;
+            content: "";
+            background: rgba(0, 0, 0, 0.3);
+            height: 43px;
+            width: 1px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+          }
+        }
+      }
+
+      &:not(:first-child) {
+        padding-top: 24px;
+
+        @include desktop {
+          padding-top: 0;
+        }
+      }
+
+      .label {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      .value {
+        @include TitanOne;
+        margin-top: 8px;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #000;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,433 @@
+@import "../../../assets/style/app";
+
+.firstScreen {
+  position: relative;
+  padding: 46px 24px 40vw;
+
+  @include desktop {
+    padding: 32px 0 32vw;
+  }
+
+  .background {
+    position: absolute;
+    //z-index: 1;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  .title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+
+    @include desktop {
+      width: 998px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .itemsWrapper {
+      display: inline-block;
+
+      .items {
+        display: flex;
+
+        .item {
+          position: relative;
+          width: 28px;
+          height: 28px;
+
+          @include desktop {
+            width: 54px;
+            height: 54px;
+          }
+
+          &:not(:first-child) {
+            margin-left: -10px;
+
+            @include desktop {
+              margin-left: -12px;
+            }
+          }
+
+          svg {
+            width: 28px;
+            height: 28px;
+
+            @include desktop {
+              width: 54px;
+              height: 54px;
+            }
+          }
+
+          img {
+            @include absoluteCenter;
+            width: 22px;
+            height: 22px;
+
+            @include desktop {
+              width: 44px;
+              height: 44px;
+            }
+          }
+        }
+      }
+    }
+
+    span {
+      @include TitanOne;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 110%;
+      text-transform: uppercase;
+      color: #000;
+
+      @include desktop {
+        font-size: 64px;
+      }
+    }
+
+  }
+
+  .card {
+    position: relative;
+    margin-top: 80px;
+    border: 1px solid #000;
+    border-radius: 16px;
+    box-shadow: 0 8px 0 0 #000;
+    background: #FFF;
+    padding: 24px 16px;
+    box-sizing: border-box;
+    max-width: 592px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include desktop {
+      margin-top: 112px;
+      padding: 24px;
+      width: 592px;
+    }
+
+    .timerWrapper {
+      position: absolute;
+      left: 50%;
+      top: -56px;
+      transform: translateX(-50%);
+      width: 216px;
+      height: 80px;
+
+      @include desktop {
+        top: -80px;
+        width: 288px;
+        height: 108px;
+      }
+
+      svg {
+        width: 216px;
+        height: 80px;
+
+        @include desktop {
+          width: 288px;
+          height: 108px;
+        }
+      }
+
+      .time {
+        @include PocketCalculator;
+        position: absolute;
+        left: calc(50% - 5px);
+        top: calc(50% + 2px);
+        transform: translate(-50%, -50%);
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 140%;
+        color: #000;
+        white-space: nowrap;
+
+        @include desktop {
+          font-size: 38px;
+          left: calc(50% - 7px);
+        }
+
+      }
+
+    }
+
+    .cardTitle {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      text-align: center;
+      color: #000;
+    }
+
+    .values {
+      margin-top: 16px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #000;
+
+      @include desktop {
+        font-size: 18px;
+      }
+    }
+
+    .indicator {
+      position: relative;
+      margin-top: 12px;
+      height: 26px;
+      border-radius: 999px;
+      border: 1px solid #000;
+      overflow: hidden;
+
+      .inner {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        background: #f59e96;
+        border-right: 1px solid #000;
+
+        svg {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+        }
+      }
+    }
+
+    .tip {
+      @include centerRow;
+      border: 1px solid #000;
+      border-radius: 8px;
+      width: 127px;
+      height: 30px;
+      box-shadow: 0 2px 0 0 #000;
+      background: #fac59f;
+      margin: 16px auto 0;
+
+      span {
+        @include TitanOne;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: #000;
+      }
+    }
+
+    .tabs {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 4px;
+
+      @include desktop {
+        grid-column-gap: 16px;
+      }
+
+      .tab {
+        @include button;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        border-radius: 8px;
+        background: #eff0f4;
+        padding-left: 8px;
+        border: 1px solid transparent;
+        transition: 0.3s;
+
+        &:hover {
+          border: 1px solid #000;
+        }
+
+        &_selected {
+          border: 1px solid #000;
+          box-shadow: 0 2px 0 0 #000;
+        }
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+
+        span {
+          margin-left: 8px;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 140%;
+          color: #000;
+        }
+      }
+    }
+
+    .form {
+      margin-top: 24px;
+
+      @include desktop {
+        margin-top: 16px;
+      }
+
+      .fields {
+        @include desktop {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-column-gap: 16px;
+        }
+
+        .field {
+          position: relative;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          height: 40px;
+          box-sizing: border-box;
+          padding: 8px 8px 8px 16px;
+          display: flex;
+          align-items: center;
+
+          &:nth-child(2) {
+            margin-top: 16px;
+
+            @include desktop {
+              margin-top: 0;
+            }
+          }
+
+          input {
+            flex-grow: 1;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            color: rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+            border: none;
+            background: none;
+            outline: none;
+
+            &:focus {
+              color: #000;
+            }
+
+            /* Chrome, Safari, Edge, Opera */
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+
+            /* Firefox */
+            &[type=number] {
+              -moz-appearance: textfield;
+            }
+          }
+
+          svg {
+            margin-left: 8px;
+            width: 24px;
+            height: 24px;
+          }
+
+          p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            color: #000;
+          }
+
+          .error {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: translateY(100%);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            color: #9c0e0e;
+          }
+
+        }
+
+
+      }
+
+      .submitBtn {
+        @include button;
+        display: block;
+        margin-top: 32px;
+        height: 50px;
+        border: 1px solid #000;
+        border-radius: 8px;
+        max-width: 390px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 2px 0 0 #000;
+        transition: 0.3s;
+        background: #f77113;
+
+        @include desktop {
+          width: 390px;
+        }
+
+        &:hover {
+          background: #f68c43;
+        }
+
+        span {
+          font-style: italic;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 120%;
+          text-transform: uppercase;
+          text-align: center;
+          color: #000;
+        }
+      }
+
+    }
+
+    .links {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+
+      p {
+        font-style: italic;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 120%;
+        text-transform: uppercase;
+        text-align: center;
+        white-space: nowrap;
+        transition: 0.3s;
+
+        @include desktop {
+          width: 187px;
+        }
+
+        &:hover {
+          @include desktop {
+            color: #f77113;
+          }
+        }
+
+
+        &:nth-child(2) {
+          margin-left: 40px;
+
+          @include desktop {
+            margin-left: 16px;
+          }
+        }
+      }
+
+    }
+  }
+}
+

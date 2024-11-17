@@ -1,0 +1,108 @@
+@import "../../../../../assets/style/app";
+
+  .line {
+    position: relative;
+    height: 78px;
+
+    @include desktop {
+      height: 25vh;
+    }
+
+    .part {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      .item {
+        position: relative;
+        margin-right: 20px;
+
+        @include desktop {
+          margin-right: 6vh;
+        }
+
+        p {
+          @include TitanOne;
+          font-weight: 400;
+          font-size: 65px;
+          line-height: 120%;
+          text-transform: uppercase;
+          text-align: center;
+          color: #f2c53b;
+
+          @include desktop {
+            font-size: 20vh;
+          }
+        }
+
+        .img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50px;
+
+          &_0 {
+            width: 72px;
+            height: 65px;
+            top: 11px;
+            left: 30px;
+
+            @include desktop {
+              width: vhD(255);
+              height: vhD(231);
+              top: vhD(38);
+              left: vhD(106);
+            }
+          }
+
+          &_1 {
+            width: 91px;
+            height: 116px;
+            top: -35px;
+            left: -40px;
+
+            @include desktop {
+              width: vhD(321);
+              height: vhD(409);
+              top: vhD(-120);
+              left: vhD(-140);
+            }
+          }
+
+          &_2 {
+            width: 113px;
+            height: 103px;
+            top: -30px;
+            left: -25px;
+
+            @include desktop {
+              width: vhD(397);
+              height: vhD(362);
+              top: vhD(-104);
+              left: vhD(-90);
+            }
+          }
+
+          &_3 {
+            width: 55px;
+            height: 64px;
+            top: -7px;
+            left: -165px;
+
+            @include desktop {
+              width: vhD(196);
+              height: vhD(225);
+              top: vhD(-25);
+              left: vhD(-277);
+            }
+          }
+
+        }
+      }
+
+
+    }
+  }

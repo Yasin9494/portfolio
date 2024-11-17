@@ -1,0 +1,15 @@
+.moonpay-widget__close-overlay-button {
+  background-color: #f5a300 !important;
+  border-radius: 10px;
+  top: 1.5rem;
+  right: 1.5rem;
+
+  & > svg {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+#moonpay-react-sdk-embedded-frame {
+  display: none;
+}

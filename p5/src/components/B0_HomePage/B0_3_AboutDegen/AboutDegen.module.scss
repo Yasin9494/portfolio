@@ -1,0 +1,228 @@
+@import "../../../assets/style/app";
+
+.aboutDegen {
+  @include container;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include desktop {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .inner {
+    @include inner;
+
+    .titleWrapper {
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      .coin {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        transform: translate(-50%, -50%) rotate(-30deg);
+        top: 50%;
+        left: calc(50% + 15px);
+        width: 124px;
+        height: 117px;
+
+
+        @include desktop {
+          left: calc(50% + 35px);
+          width: 343px;
+          height: 322px;
+          transform: translate(-50%, -50%) rotate(-30deg);
+        }
+      }
+
+      .part {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &:nth-child(1) {
+          align-items: flex-end;
+          z-index: 1;
+        }
+
+        &:nth-child(2) {
+          align-items: flex-start;
+          margin-left: 62px;
+          z-index: 3;
+
+          @include desktop {
+            margin-left: 110px;
+          }
+        }
+
+        p {
+          @include TitanOne;
+          font-weight: 400;
+          font-size: 36px;
+          line-height: 110%;
+          text-transform: uppercase;
+          text-align: right;
+          color: #000;
+
+          @include desktop {
+            font-size: 167px;
+          }
+
+          &:nth-child(2) {
+            margin-top: -5px;
+
+            @include desktop {
+              margin-top: 0;
+            }
+          }
+        }
+
+      }
+    }
+
+    .parts {
+      margin-top: 24px;
+
+      @include desktop {
+        margin-top: 48px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 16px;
+      }
+
+      .leftPart {
+
+        .texts {
+
+          p:nth-child(2) {
+            margin-top: 16px;
+          }
+
+          span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            color: #000;
+          }
+
+          .ticket {
+            display: inline-block;
+            border: 1px solid #000;
+            border-radius: 8px;
+            box-shadow: 0 2px 0 0 #000;
+
+            transform: rotate(2deg);
+            padding: 4px 8px;
+
+            @include TitanOne;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: #000;
+
+            &_0 {
+              background: #aae7c0;
+            }
+
+            &_1 {
+              background: #fac59f;
+            }
+            &_2 {
+              background: #f4eb83;
+            }
+          }
+
+
+        }
+
+        .leftPartTitle {
+          margin-top: 32px;
+          @include TitanOne;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 120%;
+          text-transform: uppercase;
+          color: #000;
+          text-align: center;
+
+          @include desktop {
+            font-size: 32px;
+            text-align: left;
+          }
+
+        }
+
+        .items {
+          margin-top: 24px;
+
+          @include desktop {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 12px;
+          }
+
+          .item {
+            border: 1px solid #000;
+            box-shadow: 0 2px 0 0 #000;
+            border-radius: 8px;
+            padding: 14px 0;
+
+            &:not(:first-child) {
+              margin-top: 16px;
+
+              @include desktop {
+                margin-top: 0;
+              }
+            }
+
+            p {
+              text-align: center;
+            }
+
+            p:nth-child(1) {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 140%;
+              text-align: center;
+              color: rgba(0, 0, 0, 0.5);
+            }
+
+            p:nth-child(2) {
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 140%;
+              text-align: center;
+              color: #000;
+              margin-top: 8px;
+            }
+          }
+        }
+
+      }
+
+
+      .rightPart {
+        display: block;
+        margin-top: 32px;
+        max-width: 312px;
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include desktop {
+          max-width: 100%;
+          margin-top: 0;
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+}

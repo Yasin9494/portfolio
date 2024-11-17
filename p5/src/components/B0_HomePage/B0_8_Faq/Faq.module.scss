@@ -1,0 +1,226 @@
+@import "../../../assets/style/app";
+
+.faq {
+  @include container;
+  overflow: hidden;
+  background: #eff0f4;
+  padding-top: 32px;
+  padding-bottom: 64px;
+
+  @include desktop {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .inner {
+    @include inner;
+
+    .title {
+      text-align: center;
+      position: relative;
+      width: 312px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include desktop {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      span {
+        position: relative;
+        z-index: 2;
+        @include TitanOne;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 120%;
+        text-transform: uppercase;
+        text-align: center;
+        color: #000;
+
+        @include desktop {
+          font-size: 116px;
+        }
+      }
+
+      .cloud {
+        position: absolute;
+        z-index: 1;
+        display: block;
+        width: 277px;
+        height: 222px;
+        top: -6px;
+        left: -165px;
+
+        @include desktop {
+          width: 767px;
+          height: 616px;
+          top: -100px;
+          left: -350px;
+        }
+      }
+    }
+
+    .items {
+      position: relative;
+      z-index: 3;
+      margin-top: 32px;
+
+      @include desktop {
+        margin-top: 48px;
+        width: 592px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .item {
+        position: relative;
+        z-index: 10;
+        border: 1px solid #000;
+        border-radius: 16px;
+        box-shadow: 0 8px 0 0 #000;
+        background: #FFF;
+        padding: 24px;
+
+        &:not(:first-child) {
+          margin-top: 16px;
+        }
+
+        .questionWrapper {
+          display: flex;
+          justify-content: space-between;
+
+          .question {
+            @include TitanOne;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: #000;
+            margin-right: 16px;
+
+            @include desktop {
+              font-size: 32px;
+            }
+
+          }
+
+          .btn {
+            @include button;
+            @include centerRow;
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            background: #f3c53b;
+            transition: 0.3s;
+
+            &:hover {
+              @include desktop {
+                background: #f4d371;
+              }
+            }
+
+            &_open {
+              svg {
+                transform: rotate(180deg);
+              }
+            }
+
+            svg {
+              width: 24px;
+              height: 24px;
+              transition: 0.3s;
+            }
+
+
+          }
+        }
+
+
+
+        .answer {
+          margin-top: 16px;
+
+          @include desktop {
+            margin-top: 24px;
+          }
+
+          .span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            color: #000;
+          }
+
+          .ticket {
+            display: inline-block;
+            border: 1px solid #000;
+            border-radius: 8px;
+            box-shadow: 0 2px 0 0 #000;
+            background: #fac59f;
+            padding: 5px 8px;
+            transform: rotate(2deg);
+
+            @include TitanOne;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: #000;
+          }
+        }
+      }
+
+      .left {
+        position: absolute;
+        display: block;
+        width: 394px;
+        height: 434px;
+        bottom: -95px;
+        left: -124px;
+
+        @include desktop {
+          left: -370px;
+          bottom: -30px;
+        }
+      }
+
+      .right {
+        position: absolute;
+        display: block;
+        width: 256px;
+        height: 477px;
+        top: -157px;
+        right: -122px;
+
+        @include desktop {
+          top: -150px;
+          right: -385px;
+        }
+      }
+
+      .cloudLeft {
+        @include onlyDesktop;
+        position: absolute;
+        width: 469px;
+        height: 132px;
+        top: 50px;
+        left: -500px;
+      }
+
+      .cloudRight {
+        @include onlyDesktop;
+        position: absolute;
+        width: 222px;
+        height: 63px;
+        top: 343px;
+        right: -280px;
+      }
+
+    }
+
+  }
+}

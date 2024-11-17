@@ -1,0 +1,38 @@
+@import "../../assets/style/app";
+
+.preloader {
+  @include centerColumn;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background: #f59e96;
+
+  .img {
+    //display: block;
+    width: 300px;
+    height: auto;
+
+    @include desktop {
+      width: 378px;
+      height: 270px;
+    }
+  }
+
+  .percent {
+    @include TitanOne;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 24px;
+
+    @include desktop {
+      font-size: 64px;
+      margin-top: 48px;
+    }
+  }
+}

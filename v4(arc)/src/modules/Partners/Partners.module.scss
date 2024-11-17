@@ -1,0 +1,43 @@
+@import '/src/functions';
+
+.partners {
+  margin: rem(120) 0 0;
+
+  @media (max-width: 767px) {
+    margin: remMb(30) 0 0;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &Body {
+    margin: rem(70) 0 0;
+    display: flex;
+    justify-content: space-between;
+    gap: rem(50);
+
+    @media (max-width: 767px) {
+      margin: remMb(20) 0 0;
+      // gap: remMb(24) remMb(20);
+      // flex-wrap: wrap;
+    }
+
+    &__img {
+      width: auto;
+      height: rem(70);
+      margin: 0 0 0 rem(40);
+
+      @media (max-width: 767px) {
+        height: remMb(28);
+        margin: 0 0 0 remMb(30);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

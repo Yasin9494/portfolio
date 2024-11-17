@@ -1,0 +1,57 @@
+@import "../../assets/style/app";
+
+.header {
+  position: relative;
+  z-index: 100;
+
+  .headerBottom {
+    @include container;
+    margin-top: 16px;
+
+    @include desktop {
+      margin-top: 24px;
+    }
+
+    .inner {
+      @include inner;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        display: block;
+
+        img {
+          display: block;
+          width: 120px;
+          height: 60px;
+        }
+      }
+
+      .links {
+        @include onlyDesktop(flex);
+
+        .link {
+          text-decoration: none;
+
+          &:not(:first-child) {
+            margin-left: 16px;
+          }
+        }
+      }
+
+      .burgerBtn {
+        @include onlyMobile(flex);
+        @include centerRow;
+        @include button;
+        border: 1px solid #000;
+        border-radius: 8px;
+        width: 40px;
+        height: 40px;
+
+        box-shadow: 0 2px 0 0 #000;
+        background: #fac59f;
+      }
+    }
+  }
+}

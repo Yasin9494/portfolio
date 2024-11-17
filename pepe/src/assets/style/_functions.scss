@@ -1,0 +1,5 @@
+@use "sass:math";
+
+@function vhD($value) {
+  @return #{($value * 0.0877)}vh;
+}

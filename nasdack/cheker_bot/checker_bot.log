@@ -1,0 +1,30 @@
+2024-06-28 23:31:00,682 INFO Received data: {'channel': '@pronfti', 'user_id': 186639945}
+2024-06-28 23:31:00,876 INFO Check subscription response: {'ok': True, 'result': {'user': {'id': 186639945, 'is_bot': False, 'first_name': '---------', 'last_name': '--------', 'username': 'sswqzx_94_94', 'is_premium': True}, 'status': 'member'}}
+2024-06-28 23:31:00,876 INFO User 186639945 subscription status in channel @pronfti: True
+2024-07-01 02:27:11,514 INFO Received data: {'channel': '@pronfti', 'user_id': 186639945}
+2024-07-01 02:27:11,747 INFO Check subscription response: {'ok': True, 'result': {'user': {'id': 186639945, 'is_bot': False, 'first_name': '---------', 'last_name': '--------', 'username': 'sswqzx_94_94', 'is_premium': True}, 'status': 'member'}}
+2024-07-01 02:27:11,748 INFO User 186639945 subscription status in channel @pronfti: True
+2024-07-01 02:27:23,528 INFO Received data: {'channel': '@pronfti', 'user_id': 186639945}
+2024-07-01 02:27:23,733 INFO Check subscription response: {'ok': True, 'result': {'user': {'id': 186639945, 'is_bot': False, 'first_name': '---------', 'last_name': '--------', 'username': 'sswqzx_94_94', 'is_premium': True}, 'status': 'member'}}
+2024-07-01 02:27:23,733 INFO User 186639945 subscription status in channel @pronfti: True
+2024-07-01 02:47:27,045 INFO Received data: {'channel': '@pronfti', 'user_id': 186639945}
+2024-07-01 02:47:27,262 INFO Check subscription response: {'ok': True, 'result': {'user': {'id': 186639945, 'is_bot': False, 'first_name': '---------', 'last_name': '--------', 'username': 'sswqzx_94_94', 'is_premium': True}, 'status': 'member'}}
+2024-07-01 02:47:27,262 INFO User 186639945 subscription status in channel @pronfti: True
+2024-07-01 02:49:18,659 INFO Received data: {'channel': '@pronfti', 'user_id': 186639945}
+2024-07-01 02:49:18,816 INFO Check subscription response: {'ok': True, 'result': {'user': {'id': 186639945, 'is_bot': False, 'first_name': '---------', 'last_name': '--------', 'username': 'sswqzx_94_94', 'is_premium': True}, 'status': 'member'}}
+2024-07-01 02:49:18,816 INFO User 186639945 subscription status in channel @pronfti: True
+2024-07-01 02:52:01,682 INFO Received data: {'channel': '@pronfti', 'user_id': 186639945}
+2024-07-01 02:52:01,852 INFO Check subscription response: {'ok': True, 'result': {'user': {'id': 186639945, 'is_bot': False, 'first_name': '---------', 'last_name': '--------', 'username': 'sswqzx_94_94', 'is_premium': True}, 'status': 'member'}}
+2024-07-01 02:52:01,853 INFO User 186639945 subscription status in channel @pronfti: True
+2024-07-01 03:02:50,593 INFO Received data: {'channel': '@pronfti', 'user_id': 186639945}
+2024-07-01 03:02:50,765 INFO Check subscription response: {'ok': True, 'result': {'user': {'id': 186639945, 'is_bot': False, 'first_name': '---------', 'last_name': '--------', 'username': 'sswqzx_94_94', 'is_premium': True}, 'status': 'member'}}
+2024-07-01 03:02:50,766 INFO User 186639945 subscription status in channel @pronfti: True
+2024-07-01 03:08:41,372 INFO Received data: {'channel': '@pronfti', 'user_id': 186639945}
+2024-07-01 03:08:41,591 INFO Check subscription response: {'ok': True, 'result': {'user': {'id': 186639945, 'is_bot': False, 'first_name': '---------', 'last_name': '--------', 'username': 'sswqzx_94_94', 'is_premium': True}, 'status': 'member'}}
+2024-07-01 03:08:41,591 INFO User 186639945 subscription status in channel @pronfti: True
+2024-07-01 03:14:43,293 INFO Received data: {'channel': '@pronfti', 'user_id': 186639945}
+2024-07-01 03:14:43,511 INFO Check subscription response: {'ok': True, 'result': {'user': {'id': 186639945, 'is_bot': False, 'first_name': '---------', 'last_name': '--------', 'username': 'sswqzx_94_94', 'is_premium': True}, 'status': 'member'}}
+2024-07-01 03:14:43,512 INFO User 186639945 subscription status in channel @pronfti: True
+2024-07-01 03:19:43,521 INFO Received data: {'channel': '@pronfti', 'user_id': 186639945}
+2024-07-01 03:19:43,729 INFO Check subscription response: {'ok': True, 'result': {'user': {'id': 186639945, 'is_bot': False, 'first_name': '---------', 'last_name': '--------', 'username': 'sswqzx_94_94', 'is_premium': True}, 'status': 'member'}}
+2024-07-01 03:19:43,730 INFO User 186639945 subscription status in channel @pronfti: True

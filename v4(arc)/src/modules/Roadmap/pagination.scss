@@ -1,0 +1,8 @@
+@import '/src/functions';
+
+.swiper-pagination {
+  bottom: remMb(0) !important;
+  display: flex;
+  justify-content: center;
+  gap: remMb(8);
+}

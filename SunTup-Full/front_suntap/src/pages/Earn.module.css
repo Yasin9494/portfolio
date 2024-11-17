@@ -1,0 +1,88 @@
+.earn {
+	margin: 20px;
+}
+.summ {
+	padding: 10px;
+	margin: 0 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #fff;
+	font-size: 20px;
+	backdrop-filter: blur(28px);
+	background: linear-gradient(
+		223deg,
+		rgba(151, 71, 255, 0.5) 6.53%,
+		rgba(255, 255, 255, 0.5) 100%
+	);
+	opacity: 0.9;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+.taskList {
+	list-style-type: none;
+	padding: 0;
+	backdrop-filter: blur(28px);
+	background: linear-gradient(
+		223deg,
+		rgba(151, 71, 255, 0.5) 6.53%,
+		rgba(255, 255, 255, 0.5) 100%
+	);
+	opacity: 0.9;
+	padding: 20px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.taskList li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: #fff;
+}
+.taskList li > img {
+	width: 60px;
+}
+.desc {
+	color: #fff;
+	width: calc(100% - 100px);
+	display: flex;
+	align-items: center;
+}
+.desc img {
+	width: 24px;
+}
+.completed {
+	text-decoration: line-through;
+	color: #888;
+}
+
+.task_btn {
+	margin-left: auto;
+	width: 100px;
+	padding: 10px;
+	background-color: #811dd9;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	border-radius: 40px;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	-ms-border-radius: 40px;
+	-o-border-radius: 40px;
+}
+
+.taskButton:disabled {
+	background-color: #888;
+	cursor: not-allowed;
+}

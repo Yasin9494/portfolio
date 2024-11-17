@@ -1,0 +1,56 @@
+@import '/src/functions';
+
+.slider {
+  @media (max-width: 767px) {
+    margin: remMb(10) 0 0;
+    padding: 0 0 remMb(30) !important;
+  }
+
+  .pagination {
+    bottom: 0;
+  }
+
+  &__bullet {
+    flex: 0 0 auto;
+    display: block;
+    width: remMb(8);
+    height: remMb(8);
+    border-radius: 50%;
+    background-color: #fff;
+
+    transition: all 0.3s ease;
+
+    &.active {
+      background-color: #f5a300;
+    }
+  }
+}
+
+.faq {
+  margin: rem(95) 0 0;
+
+  @media (max-width: 767px) {
+    margin: remMb(30) 0 0;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin: rem(60) 0 0;
+    text-align: center;
+
+    @media (max-width: 767px) {
+      margin: remMb(12) 0 0;
+    }
+  }
+
+  &Body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: rem(50) 0 0;
+    gap: rem(20) rem(15);
+  }
+}

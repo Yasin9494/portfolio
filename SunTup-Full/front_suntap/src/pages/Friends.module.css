@@ -1,0 +1,117 @@
+.friends {
+	height: 100%;
+}
+.info {
+	margin: 20px 20px 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	color: #fff;
+}
+.info .item {
+	padding: 15px;
+	background: #811dd9;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.info .item img {
+	width: 26px;
+}
+.info .item span {
+	color: #f1ff2e;
+}
+.invite {
+	margin: 15px 20px;
+	display: flex;
+	color: #fff;
+	gap: 15px;
+	font-size: 18px;
+	font-weight: 500;
+}
+.share_link {
+	width: 100%;
+	padding: 15px 20px;
+	background: #811dd9;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	cursor: pointer;
+}
+.share_link img {
+	width: 20px;
+}
+.copy {
+	padding: 15px 19px 15px 21px;
+	background: #811dd9;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.copy img {
+	width: 20px;
+}
+ul.friends_list {
+	margin: 15px 20px;
+	overflow: auto;
+	max-height: calc(100vh - 415px);
+	backdrop-filter: blur(28px);
+	background: linear-gradient(
+		223deg,
+		rgba(151, 71, 255, 0.5) 6.53%,
+		rgba(255, 255, 255, 0.5) 100%
+	);
+	opacity: 0.9;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	position: relative;
+}
+ul.friends_list li {
+	padding: 8px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+ul.friends_list li img {
+	width: 37px;
+}
+ul.friends_list li .name {
+	font-weight: 600;
+}
+ul.friends_list li .desc {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+ul.friends_list li .desc img {
+	width: 20px;
+}
+.big_list {
+	height: calc(100vh - 210px) !important;
+	max-height: calc(100vh - 210px) !important;
+}

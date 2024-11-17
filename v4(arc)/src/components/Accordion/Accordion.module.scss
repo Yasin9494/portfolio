@@ -1,0 +1,124 @@
+@import '/src/functions';
+
+.accordion__content {
+  transition: height ease 0.4s;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.accordion__content.open {
+  height: auto;
+}
+
+.accordion {
+  flex: 0 0 calc(50% - rem(7.5));
+  min-height: rem(170);
+  padding: rem(22);
+  border-radius: rem(10);
+  border: 1px solid #fff;
+  box-shadow: 0px rem(4) rem(10) 0px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+
+  @media (max-width: 767px) {
+    flex: 1 1 100%;
+    border-radius: remMb(10);
+    padding: remMb(20) remMb(28);
+  }
+
+  &.active {
+    .accordion__btn {
+      color: #f5a300;
+    }
+    .accordion__arrow {
+      img {
+        transform: scale(1);
+      }
+    }
+    .accordion__content {
+    }
+  }
+
+  &.roadmap {
+    box-shadow: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    min-height: 0;
+    flex: 0 0 auto;
+
+    .accordion__btn {
+      text-align: left;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+
+    color: #fff;
+    text-align: center;
+    font-size: rem(24);
+    font-style: normal;
+    line-height: 100%;
+
+    transition: all 0.3s ease;
+
+    @media (max-width: 767px) {
+      font-size: remMb(20);
+    }
+  }
+  &__arrow {
+    display: flex;
+    flex: 0 0 auto;
+    margin: 0 0 rem(24);
+
+    width: rem(46);
+    height: rem(46);
+
+    @media (max-width: 767px) {
+      margin: 0 0 remMb(24);
+      width: remMb(46);
+      height: remMb(46);
+    }
+
+    img {
+      transition: transform 0.3s ease;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__content {
+  }
+  &__answer {
+    margin: rem(24) 0 0;
+    color: #fff;
+
+    font-size: rem(16);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+
+    @media (max-width: 767px) {
+      margin: remMb(24) 0 0;
+      font-size: remMb(16);
+      line-height: 1.2;
+    }
+
+    p {
+      &:not(:first-child) {
+        margin: rem(24) 0 0;
+
+        @media (max-width: 767px) {
+          margin: remMb(24) 0 0;
+        }
+      }
+    }
+  }
+}

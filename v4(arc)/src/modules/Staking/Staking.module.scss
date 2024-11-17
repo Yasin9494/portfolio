@@ -1,0 +1,161 @@
+@import '/src/functions';
+
+.about {
+  position: relative;
+  padding: rem(130) 0 rem(120);
+  // background-image: url(./assets/bg.jpg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: top;
+
+  @media (max-width: 767px) {
+    margin: remMb(30) 0 0;
+  }
+
+  &__bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &Body {
+    margin: rem(40) 0 0;
+    padding: 0 0 0 rem(100);
+    display: flex;
+    align-items: center;
+    gap: rem(60);
+
+    @media (max-width: 767px) {
+      padding: 0;
+      flex-direction: column-reverse;
+      gap: remMb(20);
+    }
+
+    &__video {
+      display: flex;
+      flex-direction: column;
+      max-width: rem(802);
+      flex: 0 0 auto;
+      width: 100%;
+
+      @media (max-width: 767px) {
+        max-width: 100%;
+      }
+
+      &Item {
+        height: rem(796);
+        width: 100%;
+        // border-radius: rem(10);
+        // border: 1px solid #fff;
+        // background: rgba(0, 0, 0, 0.6);
+        // box-shadow: 0px rem(4) rem(10) 0px rgba(0, 0, 0, 0.3);
+
+        @media (max-width: 767px) {
+          // height: remMb(180);
+          height: auto;
+          // border-radius: remMb(10);
+          // box-shadow: 0px remMb(4) remMb(10) 0px rgba(0, 0, 0, 0.3);
+        }
+
+        video,
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+
+      @media (max-width: 767px) {
+        gap: remMb(16);
+      }
+
+      p {
+        color: #fff;
+        font-family: Saira;
+        font-size: rem(24);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        @media (max-width: 767px) {
+          font-size: remMb(16);
+        }
+      }
+    }
+  }
+
+  &Bottom {
+    align-self: center;
+    display: flex;
+    margin: rem(30) 0 0;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      margin: remMb(22) 0 0;
+    }
+
+    &__buy {
+      display: flex;
+      align-items: center;
+      gap: rem(16);
+      color: #fff;
+      font-family: Saira;
+      font-size: rem(24);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        flex-direction: column;
+        gap: remMb(12);
+        font-size: remMb(20);
+      }
+
+      a {
+        padding: rem(12) rem(45);
+        color: #f5a300;
+        text-align: center;
+        font-family: MBF Space Habitat;
+        font-size: rem(20);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        border: 1px solid #fff;
+        border-radius: rem(10);
+
+        @media (max-width: 767px) {
+          display: block;
+          width: 100%;
+          padding: remMb(12) remMb(45);
+          font-size: remMb(20);
+          border-radius: remMb(10);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,247 @@
+@import "../../../assets/style/app";
+
+.missedOut {
+  @include container;
+  overflow: hidden;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include desktop {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .inner {
+    @include inner;
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .topPart {
+      position: relative;
+
+      @include desktop {
+        width: 592px;
+      }
+
+      .starLeftDesktop {
+        @include onlyDesktop();
+        width: 702px;
+        height: 353px;
+        position: absolute;
+        z-index: 1;
+        left: -124px;
+        bottom: -65px;
+      }
+
+      .title {
+        @include TitanOne;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #000;
+
+        @include desktop {
+          font-size: 32px;
+        }
+      }
+
+      .description {
+        margin-top: 24px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #000;
+
+        @include desktop {
+          font-size: 18px;
+        }
+      }
+
+      .btnDesktop {
+
+        @include onlyDesktop {
+          margin-top: 32px;
+          position: relative;
+          z-index: 2;
+        }
+      }
+
+    }
+
+    .bottomPart {
+      margin-top: 32px;
+
+      @include desktop {
+        margin-top: 0;
+      }
+
+      .card {
+        position: relative;
+        z-index: 2;
+        border: 1px solid #000;
+        border-radius: 16px;
+        box-shadow: 0 8px 0 0 #000;
+        background: #fac59f;
+        padding: 24px;
+
+        @include desktop {
+          width: 490px;
+        }
+
+        &::after {
+          position: absolute;
+          z-index: 2;
+          display: block;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #fac59f;
+          border-radius: 16px;
+        }
+
+        .starMobile {
+          @include onlyMobile();
+          position: absolute;
+          z-index: 1;
+          //width: 207px;
+          height: 322px;
+          top: -91px;
+          right: -25px;
+        }
+
+        .starDesktop {
+          @include onlyDesktop();
+          width: 243px;
+          height: 436px;
+          position: absolute;
+          top: -66px;
+          right: -160px;
+        }
+
+        .cardTitle {
+          @include TitanOne;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 120%;
+          text-transform: uppercase;
+          color: #000;
+          text-align: center;
+          position: relative;
+          z-index: 3;
+
+          @include desktop {
+            font-size: 32px;
+          }
+        }
+
+        .labels {
+          position: relative;
+          z-index: 3;
+          display: flex;
+          justify-content: space-between;
+          margin-top: 16px;
+
+          @include desktop {
+            margin-top: 24px;
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+
+        .items {
+          position: relative;
+          z-index: 3;
+          margin-top: 12px;
+
+          .item {
+            border: 1px solid #000;
+            border-radius: 12px;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &:not(:first-child) {
+              margin-top: 16px;
+            }
+
+            .amount {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 140%;
+              color: #000;
+            }
+
+            .apy {
+              @include centerRow;
+              border: 1px solid #000;
+              border-radius: 8px;
+              width: 50px;
+              height: 30px;
+              box-shadow: 0 2px 0 0 #000;
+
+              @include TitanOne;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 140%;
+              text-transform: uppercase;
+              color: #000;
+            }
+          }
+        }
+      }
+
+      .btnMobile {
+
+        @include onlyMobile() {
+          margin-top: 32px;
+        }
+      }
+    }
+
+    .stakeBtn {
+      @include button;
+      @include centerRow;
+      border: 1px solid #000;
+      border-radius: 8px;
+      height: 60px;
+      box-shadow: 0 2px 0 0 #000;
+      background: #f77113;
+      transition: 0.3s;
+      width: 100%;
+
+      @include desktop {
+        width: 389px;
+      }
+
+      &:hover {
+        @include desktop {
+          background: #f68c43;
+        }
+      }
+
+      span {
+        font-style: italic;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 120%;
+        text-transform: uppercase;
+        text-align: center;
+        color: #000;
+      }
+    }
+
+
+  }
+}
